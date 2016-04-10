@@ -1,0 +1,549 @@
+ 
+<style type="text/css">
+
+
+    .homeDialog {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 9; /* Sit on top */
+        right: 10px;
+        bottom:0px;
+        width: 206px;
+        height: 230px;  
+        background-color: #fff; /* Fallback color */
+        border: 1px solid black; 
+
+        -moz-box-shadow: -1px -1px 6px #333;
+        -webkit-box-shadow: -1px -1px 6px #333;
+        box-shadow: -1px -1px 6px #333;
+
+
+    }
+    .homeDialog >div {
+        position: relative; /* Stay in place */
+
+
+    }
+
+    .homeDialog .close {
+        // background: #606061;
+        background: #000;
+        color: #FFFFFF;
+        line-height: 25px;
+        position: absolute;
+        right:-25px;
+        text-align: center;
+        top: -22px;
+        width: 24px;
+        text-decoration: none;
+        margin: 10px 15px;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        opacity: 1;
+
+
+    }
+    .homeDialog .close:hover {
+        background: #00d9ff;
+    }
+
+
+
+
+</style>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- style sheet-->
+        <link rel="stylesheet" href="http://www.ccl.in/site_assets/css/main-style.css">
+        <title>IPL | Indian Cricket League | ipl Official Website | ipl16</title>
+        <style type="text/css">
+            .fancybox-custom .fancybox-skin {
+                box-shadow: 0 0 50px #222;
+            }
+        </style>
+
+        <link href="http://www.ccl.in/site_assets/css/social_styles.css" rel="stylesheet" />
+
+
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/js/jQuery v1.11.3.js"></script> 
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/js/animation-js.js"></script>
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/js/html5shiv.js"></script> 
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/js/custom.js"></script>
+
+<!--    <link rel="stylesheet" type="text/css" href="http://www.ccl.in/site_assets/css/jquery.thumbs.css" />
+<script type="text/javascript" src="http://www.ccl.in/site_assets/js/jquery.thumbs.js"></script>-->
+
+
+
+        <!--fancyBox Start-->
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/source/jquery.mousewheel-3.0.6.pack.js"></script>
+        <!-- Add fancyBox main JS and CSS files -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/source/jquery.fancybox.js?v=2.1.5"></script>
+        <link rel="stylesheet" type="text/css" href="http://www.ccl.in/site_assets/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <!-- Add Button helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="http://www.ccl.in/site_assets/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+        <!-- Add Thumbnail helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="http://www.ccl.in/site_assets/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+        <!-- Add Media helper (this is optional) -->
+        <script type="text/javascript" src="http://www.ccl.in/site_assets/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+        <script src="http://www.ccl.in/admin_assets/js/jquery.validate.min.js"></script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                //            $(".thumb").thumbs();
+                /*
+                 *  Simple image gallery. Uses default settings
+                 */
+                $('.fancybox').fancybox();
+
+                $('.fancybox-media')
+                        .attr('rel', 'media-gallery')
+                        .fancybox({
+                            openEffect: 'none',
+                            closeEffect: 'none',
+                            prevEffect: 'none',
+                            nextEffect: 'none',
+                            arrows: false,
+                            helpers: {
+                                title: {
+                                    type: 'inside'
+                                },
+                                media: {},
+                                buttons: {}
+                            }
+                        });
+
+                $(".fancybox-text").fancybox({
+                    //                wrapCSS: 'fancybox-custom',
+                    closeClick: false,
+                    //                openEffect: 'none',
+                    helpers: {
+                        title: {
+                            type: 'inside'
+                        },
+                        overlay: {
+                            css: {
+                                'background': 'rgba(238,238,238,0.85)'
+                            }
+                        },
+                        margin: [20, 60, 20, 60]
+                    },
+                    afterLoad: function () {
+                        this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                    }
+                });
+            });
+        </script>
+        <!--fancyBox End-->
+
+
+
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-23683783-1', 'auto');
+            ga('send', 'pageview');
+
+        </script> 
+
+
+
+    </head>
+    <body>
+        <!-- header starts here-->
+        <header>
+            <div class="navbar-wrapper">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                <a class="navbar-brand" href="http://www.ccl.in/"><img class="img-responsive" src="logo.jpg" title="CCL 6 of 2016"></a> </div>
+                            <div id="navbar" class="navbar-collapse collapse pull-right">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a class="active" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class=" dropdown">
+                                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                            Teams <span><i class=""></i></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                                                                                <li><a href="http://www.iplt20.com/teams/mumbai-indians">MUMBAI INDIANS</a></li>
+                                                                                                        <li><a href="http:///www.royalchallengers.com">ROYAL CHALENGERS BANGALORE</a></li>
+                                                                                                        <li><a href="http://www.sunrisershyderabad.in">SUNRISES HYDERABAD</a></li>
+                                                                                                        <li><a href="http://www.risingpunesupergiants.in">RISING PUNE SUPERGAINTS</a></li>
+                                                                                                        <li><a href="http://www.iplt20.com/teams/gujarat-lions">GUJRAT LIONS</a></li>
+                                                                                                        <li><a href="http://www.kxip.in">KINGS XI PUNJAB</a></li>
+                                                                                                        <li><a href="http://www.delhidaredevils.com">DELHI DAREDEVILS</a></li>
+                                                                                                        <li><a href="http://www.kkr.in">KOLKATA KNIGHTRIDERS</a></li>
+                                                      
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="" href="http://www.iplt20.com/schedule" target="_blank" role="button" aria-haspopup="true" aria-expanded="false">Schedule</a>
+                                    </li>
+                                    <li>
+                                        <a class="" href="http://www.iplt20.com/stats" role="button" aria-haspopup="true" aria-expanded="false">Stats</a>
+                                    </li>
+                                   				<li class="dropdown">
+                                                           
+                                        <a href="javascript:void(0)" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span><i class=""></i></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="http://www.iplt20.com/photos">Photo Gallery</a></li>
+                                            <li><a href="http://www.iplt20.com/videos">Video Gallery</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="" href="http://www.iplt20.com.in/news">News</a></li>
+                                    <li>
+                                        <a class="" href="http://www.iplt20.com/about/2016/about-us">About Us</a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+<main> 
+   
+
+     <!-- slider starts here-->
+    <section class="slider">
+        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel"> 
+            <!-- Overlay --> 
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                <!--<li data-target="#bs-carousel" data-slide-to="1"></li>-->
+                <!--<li data-target="#bs-carousel" data-slide-to="2"></li>-->
+            </ol>
+            <div class="carousel-inner">
+                <div class="item slides active">
+                    <div class="slide-1"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+	<hr style="border:3px outset #000;">
+    <!-- slider ends here--> 
+    <div class="clear"></div>    <div class="container logos-teams  fadeInUp wow">
+    <div class="row">
+        <div class="col-md-6 logos-boxs">
+            <div class="row">
+                                        <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>MUMBAI INDIANS</h6>
+                            <a class="logos-link bengal-tigers" href="http://www.iplt20.com/teams/mumbai-indians">
+                                <img class="img-responsive" src="mumbai.jpg" alt="MI" >
+                            </a> 
+                        </div>
+                                                <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>KINGS XI PUNJAB</h6>
+                            <a class="logos-link bhojpuri-dabanggs" href="http://www.kxip.in">
+                                <img class="img-responsive" src="punjab.jpg" alt="KXIP" >
+                            </a> 
+                        </div>
+                                                <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>ROYAL CHALENGERS BANGALORE</h6>
+                            <a class="logos-link chennai-rhinos" href="http:///www.royalchallengers.com">
+                                <img class="img-responsive" src="rcb.jpg" alt="RCB" >
+                            </a> 
+                        </div>
+                                                <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>DELHI DAREDEVILS</h6>
+                            <a class="logos-link karnataka-bulldozers" href="http://www.delhidaredevils.com">
+                                <img class="img-responsive" src="delhi.jpg" alt="DD" >
+                            </a> 
+                        </div>
+                                                </div>
+                    </div>
+                    <div class="col-md-6 logos-boxs">
+                        <div class="row">
+
+                                                    <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>RISING PUNE SUPERGAINTS</h6>
+                            <a class="logos-link kerala-strikers" href="http://www.risingpunesupergiants.in">
+                                <img class="img-responsive" src="pune.jpg" alt="RPS" >
+                            </a> 
+                        </div>
+                                                <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>GUJRAT LIONS</h6>
+                            <a class="logos-link mumbai-heroes" href="http://www.iplt20.com/teams/gujarat-lions">
+                                <img class="img-responsive" src="gujarat.jpg" alt="GL" >
+                            </a> 
+                        </div>
+                                                <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>SUNRISES HYDERABAD</h6>
+                            <a class="logos-link punjab-de-sher" href="http://www.sunrisershyderabad.in">
+                                <img class="img-responsive" src="ap.jpg" alt="SH" >
+                            </a> 
+                        </div>
+                                                <div class="col-md-3 col-xs-3 col-sm-3 logos-box">
+                            <h6>KOLKATA KNIGHTRIDERS</h6>
+                            <a class="logos-link telugu-warriors" href="http://www.kkr.in">
+                                <img class="img-responsive" src="kolkata.jpg" alt="KKR" >
+                            </a> 
+                        </div>
+                        
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+    <hr style="border:3px outset #000;">
+   
+
+
+    
+    <!-- logos all teams ends here--> 
+    <!-- current match schedule starts here-->
+
+<!-- team captains block starts here-->
+
+<section class="row team-captains nomrg-desk">
+    <div class="container">
+        <article class="team-capt-top text-center">
+            <h2>TEAM CAPTAINS</h2>
+<!--                <p>Leading and Ensuring the Spirit of Cricket in the team                                     
+                Here are our IPL Team Captains
+            </p>-->
+        </article>
+        <div class="captains-block">
+            <div class="carousel slide" id="myCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <ul class="thumbnails">
+                                                                    <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="zaheerkhan.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>ZAHEER KHAN</h4>
+                                                    <a href="http://www.ccl.in/team/telugu-warriors"> 
+                                                        <p>DELHI DAREDEVILS</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="DavidMiller.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>DavidMiller</h4>
+                                                    <a href="http://www.ccl.in/team/karnataka-bulldozers"> 
+                                                        <p>KXIP</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="raina.png" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>SURESH RAINA</h4>
+                                                    <a href="http://www.ccl.in/team/kerala-strikers"> 
+                                                        <p>GUJRAT LIONS</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="rohit.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>ROHIT SHARMA</h4>
+                                                    <a href="http://www.ccl.in/team/punjab-de-sher"> 
+                                                        <p>MUMBAI INDIANS</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                </ul>
+                    </div>
+                    <div class="item">
+                        <ul class="thumbnails">
+                                                                    <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="kholi.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>VIRAT KHOLI</h4>
+                                                    <a href="http://www.ccl.in/team/bhojpuri-dabanggs"> 
+                                                        <p>ROYAL CHALENGERS BANGALORE</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="davidwarner.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>DAVID WARNER</h4>
+                                                    <a href="http://www.ccl.in/team/bengal-tigers"> 
+                                                        <p>SUNRISES HYDERABAD</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="dhoni.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>MAHENDRASING DHONI</h4>
+                                                    <a href="http://www.ccl.in/team/chennai-rhinos"> 
+                                                        <p>RPS</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                                <li class="col-sm-3 col-xs-6">
+                                            <div class="fff">
+                                                <div class="thumbnail"> <a><img src="gambir.jpg" alt=""></a> </div>
+                                                <div class="caption">
+                                                    <h4>GAUTAM GAMBIR</h4>
+                                                    <a href="http://www.ccl.in/team/mumbai-heroes"> 
+                                                        <p>KKR</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                                                </ul>
+                    </div>
+                </div>
+                <nav>
+                    <ul class = "control-box pager">
+                        <li><a data-slide = "prev" href = "#myCarousel" class = ""><i class = "glyphicon glyphicon-chevron-left"></i></a></li>
+                        <li><a data-slide = "next" href = "#myCarousel" class = ""><i class = "glyphicon glyphicon-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+                <!--/.control-box -->
+            </div>
+            <!--/#myCarousel --> 
+        </div>
+    </div>
+</section>
+<!--team captains block ends here-->
+
+  
+<!-- current match schedule ends here--> 
+
+<section class="row  nomrg-desk hidden-xs">
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <div class="title-block">
+            <div class="hr-div">
+                <hr>
+                <hr>
+            </div>
+            <h2>Social Wall</h2>
+            <!--<p>Mumbai</p>-->
+
+        </div>
+
+
+        <div style="width: 1020px; margin: 0px auto; ">
+            <iframe src="http://www.iplt20.com/videos/media/id/4832196459001/ipl-2016-vvs-laxman-muttiah-muralitharan-interview" scrolling="no" frameBorder="0" style=" width:1020px; height:800px; margin: auto" ></iframe> 
+
+        </div>  
+        <!--            <div style="width: 1020px; height: 800px; margin: 0px auto; overflow: hidden;position: relative;" >
+                
+                    </div>-->
+        <br />
+        <br />
+        <br />
+    </div>
+</section>    
+    
+  
+</main>
+<!--main ends here-->
+<!-- footer starts here-->
+<footer> 
+    <!-- bottom footer starts-->
+    <section class="bottom-footer">
+        <div class="row nomrg-desk">
+            <div class="container container-topfooter nopad-desk">
+                <div class="col-md-6 nopad-desk about-ccl">
+                    <a class="logo" href="http://www.iplt20.com/"><img src="ipl.png"  title="INDIAN CRICKET LEAGUE 2016"></a>
+                    <article>
+                        <p>
+                            The Indian Premier League (IPL) is a professional Twenty20 cricket league
+							in India contested annually by franchise teams representing Indian cities. 
+							The league, founded by the Board of Control for Cricket in India (BCCI) 
+							member Lalit Modi in 2007, is scheduled over April and May of every year. 
+							The title sponsor of IPL is Vivo Electronics, thus the league is officially 
+							known as the Vivo Indian Premier League.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-3 col-xs-6 col-md-offset-1 footer-nav">
+                    <h2><font color="black" >Teams</font></h2>
+                    <ul>
+                                                       <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/teams/mumbai-indians"><font color="black" >MI</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http:///www.royalchallengers.com"><font color="black" >RCB</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http://www.sunrisershyderabad.in"><font color="black" >SH</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/teams/gujarat-lions"><font color="black" >GL</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http://www.risingpunesupergiants.in"><font color="black" >RPS</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http://www.kxip.in"><font color="black" >KXIP</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http://www.kkr.in"><font color="black" >KKR</font></a></li>
+                                                                <li><i class="fa fa-chevron-right"></i><a href="http://www.delhidaredevils.com"><font color="black" >DD</font></a></li>  
+                                  </ul>
+                </div>
+                <div class="col-md-2 col-xs-6 footer-nav">
+                    <h2><font color="black" >QUICK LINKS</font></h2>
+                    <ul>
+                        <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/news"><font color="black" >NEWS</font></a></li>
+                        <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/schedule"><font color="black" >schedule</font></a></li>
+                        
+                        <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/photos"><font color="black" >PHOTOS</font></a></li>
+                        <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/videos"><font color="black" >VIDEOS</font></a></li>
+                        <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/about/2016/about-us"><font color="black" >ABOUT US</font></a></li>
+                        <li><i class="fa fa-chevron-right"></i><a href="http://www.iplt20.com/stats"><font color="black" >STATS</font></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <article class="rights container text-center">
+            <p><font color="black" >All Rights Reserved @ IPL  2016</font></p>
+        </article>
+    </section>
+   
+
+
+</footer>
+<!-- footer ends here-->
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('.close').on('click', function (e) {
+            $('.homeDialog').hide();
+        });
+    });
+</script>
